@@ -72,23 +72,243 @@
     <div class="bg-white">
       <IconShowcase />
     </div>
+
+    <!-- Sección de Showcase de Alertas -->
+    <div class="bg-gradient-to-br from-gray-50 to-white py-16">
+      <div class="max-w-4xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Sistema de Alertas</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Prueba nuestro sistema moderno de alertas con animaciones suaves, efectos blur y diseño contemporáneo. 
+            Cada tipo de alerta tiene su propio estilo y comportamiento.
+          </p>
+        </div>
+
+        <!-- Grid de botones para demostrar alertas -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <!-- Alerta de Éxito -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-emerald-100 hover:shadow-xl transition-all duration-300">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <IconCheck class="w-6 h-6 text-emerald-600" :stroke="2" />
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Éxito</h3>
+              <p class="text-sm text-gray-600 mb-4">Notificación de operación exitosa</p>
+              <button
+                @click="showSuccessAlert"
+                class="w-full bg-emerald-500 hover:bg-emerald-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                Probar
+              </button>
+            </div>
+          </div>
+
+          <!-- Alerta de Peligro -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <IconAlertCircle class="w-6 h-6 text-red-600" :stroke="2" />
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Error</h3>
+              <p class="text-sm text-gray-600 mb-4">Notificación de error crítico</p>
+              <button
+                @click="showDangerAlert"
+                class="w-full bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                Probar
+              </button>
+            </div>
+          </div>
+
+          <!-- Alerta de Advertencia -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-amber-100 hover:shadow-xl transition-all duration-300">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <IconAlertTriangle class="w-6 h-6 text-amber-600" :stroke="2" />
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Advertencia</h3>
+              <p class="text-sm text-gray-600 mb-4">Notificación de precaución</p>
+              <button
+                @click="showWarningAlert"
+                class="w-full bg-amber-500 hover:bg-amber-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                Probar
+              </button>
+            </div>
+          </div>
+
+          <!-- Alerta de Información -->
+          <div class="bg-white rounded-xl p-6 shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300">
+            <div class="text-center">
+              <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <IconInfoCircle class="w-6 h-6 text-blue-600" :stroke="2" />
+              </div>
+              <h3 class="font-semibold text-gray-800 mb-2">Información</h3>
+              <p class="text-sm text-gray-600 mb-4">Notificación informativa</p>
+              <button
+                @click="showInfoAlert"
+                class="w-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              >
+                Probar
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Botones para cambiar posición -->
+        <div class="mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-4 text-center">Posicionamiento</h3>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
+            <button
+              @click="setPosition('top-right')"
+              :class="position === 'top-right' ? 'bg-blue-600' : 'bg-gray-500'"
+              class="text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 hover:opacity-80"
+            >
+              Arriba Derecha
+            </button>
+            <button
+              @click="setPosition('top-left')"
+              :class="position === 'top-left' ? 'bg-blue-600' : 'bg-gray-500'"
+              class="text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 hover:opacity-80"
+            >
+              Arriba Izquierda
+            </button>
+            <button
+              @click="setPosition('bottom-right')"
+              :class="position === 'bottom-right' ? 'bg-blue-600' : 'bg-gray-500'"
+              class="text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 hover:opacity-80"
+            >
+              Abajo Derecha
+            </button>
+            <button
+              @click="setPosition('bottom-left')"
+              :class="position === 'bottom-left' ? 'bg-blue-600' : 'bg-gray-500'"
+              class="text-white font-medium py-2 px-4 rounded-lg transition-colors duration-200 hover:opacity-80"
+            >
+              Abajo Izquierda
+            </button>
+          </div>
+        </div>
+
+        <!-- Botones adicionales para casos específicos -->
+        <div class="flex flex-wrap justify-center gap-4">
+          <button
+            @click="showMultipleAlerts"
+            class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
+          >
+            Múltiples Alertas
+          </button>
+          <button
+            @click="showPersistentAlert"
+            class="bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
+          >
+            Alerta Persistente
+          </button>
+          <button
+            @click="showCustomAlert"
+            class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
+          >
+            Alerta Personalizada
+          </button>
+        </div>
+
+        <!-- Ejemplo de código -->
+        <div class="mt-12 bg-gray-50 rounded-xl p-6">
+          <div class="flex items-center justify-between mb-4">
+            <h3 class="font-semibold text-gray-800">Ejemplo de Uso</h3>
+            <button
+              @click="copyCodeExample"
+              class="bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-1 rounded-md transition-colors duration-200"
+            >
+              {{ copied ? '¡Copiado!' : 'Copiar' }}
+            </button>
+          </div>
+          
+          <div class="bg-gray-900 rounded-lg p-4 text-sm overflow-x-auto">
+            <pre class="text-green-400"><code><span class="text-blue-300">&lt;template&gt;</span>
+  <span class="text-yellow-300">&lt;div&gt;</span>
+    <span class="text-gray-400">&lt;!-- Tu contenido de la vista --&gt;</span>
+    <span class="text-yellow-300">&lt;button</span> <span class="text-red-300">@click=</span><span class="text-green-300">"showAlert"</span><span class="text-yellow-300">&gt;</span>Mostrar Alerta<span class="text-yellow-300">&lt;/button&gt;</span>
+    
+    <span class="text-gray-400">&lt;!-- Sistema de Alertas --&gt;</span>
+    <span class="text-yellow-300">&lt;AlertSystem</span> <span class="text-red-300">ref=</span><span class="text-green-300">"alertSystem"</span> <span class="text-yellow-300">/&gt;</span>
+  <span class="text-yellow-300">&lt;/div&gt;</span>
+<span class="text-blue-300">&lt;/template&gt;</span>
+
+<span class="text-blue-300">&lt;script&gt;</span>
+<span class="text-purple-300">import</span> AlertSystem <span class="text-purple-300">from</span> <span class="text-green-300">'@/shared/components/AlertSystem.vue'</span>
+<span class="text-purple-300">import</span> { alertService } <span class="text-purple-300">from</span> <span class="text-green-300">'@/shared/services/alertService.js'</span>
+
+<span class="text-purple-300">export default</span> {
+  <span class="text-red-300">components:</span> {
+    AlertSystem
+  },
+  <span class="text-red-300">methods:</span> {
+    <span class="text-yellow-300">showAlert</span>() {
+      <span class="text-gray-400">// Alertas básicas</span>
+      alertService.<span class="text-yellow-300">showSuccess</span>(<span class="text-green-300">'¡Operación exitosa!'</span>)
+      alertService.<span class="text-yellow-300">showDanger</span>(<span class="text-green-300">'Error crítico'</span>)
+      alertService.<span class="text-yellow-300">showWarning</span>(<span class="text-green-300">'Atención requerida'</span>)
+      alertService.<span class="text-yellow-300">showInfo</span>(<span class="text-green-300">'Información importante'</span>)
+    }
+  },
+  <span class="text-red-300">mounted</span>() {
+    <span class="text-gray-400">// Registrar el componente en el servicio</span>
+    alertService.<span class="text-yellow-300">registerAlertComponent</span>(<span class="text-purple-300">this</span>.$refs.alertSystem)
+    
+    <span class="text-gray-400">// Configurar posición por defecto</span>
+    alertService.<span class="text-yellow-300">setDefaultPosition</span>(<span class="text-green-300">'top-right'</span>)
+  }
+}
+<span class="text-blue-300">&lt;/script&gt;</span></code></pre>
+          </div>
+          
+                     <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
+             <span>Diseño glassmorphism moderno</span>
+             <span>Efectos blur avanzados</span>
+             <span>Íconos con contenedores elegantes</span>
+             <span>Animaciones fluidas</span>
+             <span>Posicionamiento dinámico</span>
+             <span>Arquitectura minimalista</span>
+           </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sistema de Alertas -->
+    <AlertSystem ref="alertSystem" />
   </div>
 </template>
 
 <script>
 import IconShowcase from '@/shared/components/IconShowcase.vue'
+import AlertSystem from '@/shared/components/AlertSystem.vue'
 import { notificationService } from '@/shared/services/notificationService.js'
+import { alertService } from '@/shared/services/alertService.js'
 import { progressService } from '@/shared/services/progressService.js'
 import { PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION } from '@/core/constants'
+import { 
+  IconCheck, 
+  IconAlertTriangle, 
+  IconAlertCircle, 
+  IconInfoCircle 
+} from '@tabler/icons-vue'
 
 export default {
   name: 'HomeView',
   components: {
-    IconShowcase
+    IconShowcase,
+    AlertSystem,
+    IconCheck,
+    IconAlertTriangle,
+    IconAlertCircle,
+    IconInfoCircle
   },
   data() {
     return {
-      progress: 0
+      progress: 0,
+      copied: false,
+      position: 'top-right'
     }
   },
   methods: {
@@ -97,10 +317,147 @@ export default {
     },
     animateProgress() {
       progressService.animateProgress(this, 'progress', PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION)
+    },
+    
+    // Métodos para demostrar las alertas
+    showSuccessAlert() {
+      alertService.showSuccess(
+        'Esta es una demostración de una alerta de éxito. La operación se completó correctamente.',
+        '¡Operación Exitosa!'
+      )
+    },
+    
+    showDangerAlert() {
+      alertService.showDanger(
+        'Esta es una demostración de una alerta de error. Algo salió mal durante el proceso.',
+        'Error Crítico'
+      )
+    },
+    
+    showWarningAlert() {
+      alertService.showWarning(
+        'Esta es una demostración de una alerta de advertencia. Debes prestar atención a esto.',
+        'Atención Requerida'
+      )
+    },
+    
+    showInfoAlert() {
+      alertService.showInfo(
+        'Esta es una demostración de una alerta informativa. Aquí tienes información útil.',
+        'Información Importante'
+      )
+    },
+    
+    showMultipleAlerts() {
+      // Mostrar múltiples alertas con diferentes retrasos
+      setTimeout(() => {
+        alertService.showInfo('Primera alerta en la secuencia', 'Alerta 1')
+      }, 100)
+      
+      setTimeout(() => {
+        alertService.showWarning('Segunda alerta con advertencia', 'Alerta 2')
+      }, 300)
+      
+      setTimeout(() => {
+        alertService.showSuccess('Tercera alerta de éxito', 'Alerta 3')
+      }, 500)
+    },
+    
+    showPersistentAlert() {
+      alertService.showAlert({
+        type: 'warning',
+        title: 'Alerta Persistente',
+        message: 'Esta alerta no se cierra automáticamente. Debes cerrarla manualmente haciendo clic en la X.',
+        duration: 0 // 0 significa que no se cierra automáticamente
+      })
+    },
+    
+    showCustomAlert() {
+      alertService.showAlert({
+        type: 'info',
+        title: 'Alerta Personalizada',
+        message: 'Esta alerta tiene una duración personalizada de 10 segundos y un mensaje especial.',
+        duration: 10000
+      })
+    },
+    
+    setPosition(newPosition) {
+      this.position = newPosition
+      alertService.setDefaultPosition(newPosition)
+      alertService.showInfo(`Posición cambiada a: ${this.getPositionLabel(newPosition)}`, 'Nueva Posición')
+    },
+    
+    getPositionLabel(position) {
+      const labels = {
+        'top-right': 'Arriba Derecha',
+        'top-left': 'Arriba Izquierda',
+        'bottom-right': 'Abajo Derecha',
+        'bottom-left': 'Abajo Izquierda'
+      }
+      return labels[position] || position
+    },
+    
+    async copyCodeExample() {
+      const codeExample = `<template>
+  <div>
+    <!-- Tu contenido de la vista -->
+    <button @click="showAlert">Mostrar Alerta</button>
+    
+    <!-- Sistema de Alertas -->
+    <AlertSystem ref="alertSystem" />
+  </div>
+</template>
+
+<script>
+import AlertSystem from '@/shared/components/AlertSystem.vue'
+import { alertService } from '@/shared/services/alertService.js'
+
+export default {
+  components: {
+    AlertSystem
+  },
+  methods: {
+    showAlert() {
+      // Alertas básicas
+      alertService.showSuccess('¡Operación exitosa!')
+      alertService.showDanger('Error crítico')
+      alertService.showWarning('Atención requerida')
+      alertService.showInfo('Información importante')
+    }
+  },
+  mounted() {
+    // Registrar el componente en el servicio
+    alertService.registerAlertComponent(this.$refs.alertSystem)
+    
+    // Configurar posición por defecto
+    alertService.setDefaultPosition('top-right')
+  }
+}
+<\/script>`
+      
+      try {
+        await navigator.clipboard.writeText(codeExample)
+        this.copied = true
+        setTimeout(() => {
+          this.copied = false
+        }, 2000)
+      } catch (err) {
+        console.error('Error al copiar:', err)
+        // Fallback para navegadores que no soporten clipboard API
+        alertService.showInfo('Código seleccionado para copiar manualmente')
+      }
     }
   },
   mounted() {
     this.animateProgress()
+    
+    // Registrar el componente de alertas en el servicio
+    alertService.registerAlertComponent(this.$refs.alertSystem)
+    
+    // Mostrar alerta de bienvenida
+    setTimeout(() => {
+      alertService.showWelcomeInfo()
+    }, 2000)
   }
 }
 </script>
