@@ -14,10 +14,10 @@ const colors = {
   bright: '\x1b[1m',
   dim: '\x1b[2m',
   // Paleta principal: Verde Vue + Azul Tailwind
-  vueGreen: '\x1b[38;2;65;184;131m',      // Verde Vue oficial
-  tailwindBlue: '\x1b[38;2;59;130;246m',  // Azul Tailwind oficial
-  darkGreen: '\x1b[38;2;34;197;94m',      // Verde más intenso
-  lightBlue: '\x1b[38;2;147;197;253m',    // Azul claro
+  vueGreen: '\x1b[38;2;65;184;131m', // Verde Vue oficial
+  tailwindBlue: '\x1b[38;2;59;130;246m', // Azul Tailwind oficial
+  darkGreen: '\x1b[38;2;34;197;94m', // Verde más intenso
+  lightBlue: '\x1b[38;2;147;197;253m', // Azul claro
   // Colores de apoyo
   white: '\x1b[37m',
   gray: '\x1b[90m',
@@ -30,7 +30,12 @@ const colors = {
   bgRed: '\x1b[41m',
   bgYellow: '\x1b[43m',
   // Gradiente Vue-Tailwind para efectos especiales
-  gradient: ['\x1b[38;2;65;184;131m', '\x1b[38;2;59;130;246m', '\x1b[38;2;34;197;94m', '\x1b[38;2;147;197;253m']
+  gradient: [
+    '\x1b[38;2;65;184;131m',
+    '\x1b[38;2;59;130;246m',
+    '\x1b[38;2;34;197;94m',
+    '\x1b[38;2;147;197;253m',
+  ],
 }
 
 const log = (message, color = colors.reset) => {
@@ -39,9 +44,12 @@ const log = (message, color = colors.reset) => {
 
 // Función para crear texto con gradiente Vue-Tailwind
 const gradient = (text) => {
-  return text.split('').map((char, i) => 
-    `${colors.gradient[i % colors.gradient.length]}${char}`
-  ).join('') + colors.reset
+  return (
+    text
+      .split('')
+      .map((char, i) => `${colors.gradient[i % colors.gradient.length]}${char}`)
+      .join('') + colors.reset
+  )
 }
 
 // Spinner animado con colores Vue/Tailwind
@@ -61,7 +69,7 @@ const spinner = {
       clearInterval(this.interval)
       process.stdout.write('\r')
     }
-  }
+  },
 }
 
 // Barra de progreso con gradiente Vue-Tailwind
@@ -74,7 +82,7 @@ const progressBar = (current, total, width = 30) => {
 }
 
 // Delay para efectos dramáticos
-const delay = (ms) => new Promise(resolve => setTimeout(resolve, ms))
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
 
 const templateDir = path.resolve(fileURLToPath(import.meta.url), '../../template')
 const cwd = process.cwd()
@@ -98,7 +106,7 @@ ${colors.reset}
 async function showBanner() {
   console.clear()
   await showWelcome()
-  
+
   const banner = `
 ${colors.vueGreen}╔═══════════════════════════════════════════════════════════╗
 ║                                                           ║
@@ -106,18 +114,21 @@ ${colors.vueGreen}╔═══════════════════�
 ║                                                           ║
 ║     ${colors.tailwindBlue}✨ Clean Architecture Starter Template ✨${colors.reset}${colors.vueGreen}        ║
 ║                                                           ║
-║   ${colors.gray}Creado con ❤️ por ${colors.bright}${colors.darkGreen}eCortes.cl${colors.reset}${colors.gray} para la comunidad${colors.reset}${colors.vueGreen}        ║
+║   ${colors.gray}Creado con  ❤️  por ${colors.bright}${colors.darkGreen}eCortes.cl${colors.reset}${colors.gray} para la comunidad${colors.reset}${colors.vueGreen}        ║
 ║                                                           ║
 ╚═══════════════════════════════════════════════════════════╝${colors.reset}
 `
-  
+
   console.log(banner)
   await delay(1000)
 }
 
 async function showProjectInfo(projectName) {
-  log(`\n${colors.bright}${colors.bgTailwindBlue} 📋 INFORMACIÓN DEL PROYECTO ${colors.reset}`, colors.white)
-  
+  log(
+    `\n${colors.bright}${colors.bgTailwindBlue} 📋 INFORMACIÓN DEL PROYECTO ${colors.reset}`,
+    colors.white,
+  )
+
   const info = [
     `${colors.tailwindBlue}📁 Nombre:${colors.reset} ${colors.bright}${projectName}${colors.reset}`,
     `${colors.vueGreen}🏗️  Arquitectura:${colors.reset} Clean Code + SOLID`,
@@ -125,9 +136,9 @@ async function showProjectInfo(projectName) {
     `${colors.vueGreen}⚡ Build Tool:${colors.reset} Vite 7.x`,
     `${colors.tailwindBlue}🧩 Framework:${colors.reset} Vue.js 3 + Options API`,
     `${colors.vueGreen}👨‍💻 Creado por:${colors.reset} ${colors.bright}${colors.darkGreen}eCortes.cl${colors.reset}`,
-    `${colors.tailwindBlue}🎯 Status:${colors.reset} ${gradient('¡Listo para la acción!')} 🚀`
+    `${colors.tailwindBlue}🎯 Status:${colors.reset} ${gradient('¡Listo para la acción!')} 🚀`,
   ]
-  
+
   for (const item of info) {
     await delay(200)
     log(item)
@@ -137,7 +148,7 @@ async function showProjectInfo(projectName) {
 
 async function animatedProgress(message, duration = 2000) {
   console.log(`\n${colors.yellow}${message}${colors.reset}`)
-  
+
   const steps = 20
   for (let i = 0; i <= steps; i++) {
     process.stdout.write(`\r${progressBar(i, steps)} `)
@@ -148,9 +159,12 @@ async function animatedProgress(message, duration = 2000) {
 
 async function showSuccess(projectName) {
   console.log('\n' + '🎉'.repeat(25))
-  log(`${colors.bgVueGreen}${colors.white}${colors.bright} 🎊 ¡PROYECTO CREADO EXITOSAMENTE! 🎊 ${colors.reset}`, colors.vueGreen)
+  log(
+    `${colors.bgVueGreen}${colors.white}${colors.bright} 🎊 ¡PROYECTO CREADO EXITOSAMENTE! 🎊 ${colors.reset}`,
+    colors.vueGreen,
+  )
   console.log('🎉'.repeat(25))
-  
+
   const successArt = `
     ${colors.vueGreen}
            ⭐ ¡FELICIDADES! ⭐
@@ -164,14 +178,14 @@ async function showSuccess(projectName) {
 
 async function showNextSteps(projectName) {
   log(`\n${colors.bright}${colors.bgDarkGreen}${colors.white} 🚀 PRÓXIMOS PASOS ${colors.reset}`)
-  
+
   const steps = [
     `${colors.vueGreen}1.${colors.reset} cd ${colors.bright}${projectName}${colors.reset} ${colors.gray}← Entra al directorio${colors.reset}`,
     `${colors.tailwindBlue}2.${colors.reset} npm run dev ${colors.gray}← Inicia el servidor de desarrollo${colors.reset}`,
     `${colors.vueGreen}3.${colors.reset} Abre ${colors.tailwindBlue}http://localhost:5173${colors.reset} ${colors.gray}← ¡Ve la magia!${colors.reset}`,
-    `${colors.tailwindBlue}4.${colors.reset} ${gradient('¡Comienza a crear cosas increíbles!')} 🌟`
+    `${colors.tailwindBlue}4.${colors.reset} ${gradient('¡Comienza a crear cosas increíbles!')} 🌟`,
   ]
-  
+
   for (const step of steps) {
     await delay(400)
     log(`  ${step}`)
@@ -180,15 +194,17 @@ async function showNextSteps(projectName) {
 }
 
 async function showDocumentation() {
-  log(`\n${colors.bright}${colors.bgTailwindBlue}${colors.white} 📚 DOCUMENTACIÓN DISPONIBLE ${colors.reset}`)
-  
+  log(
+    `\n${colors.bright}${colors.bgTailwindBlue}${colors.white} 📚 DOCUMENTACIÓN DISPONIBLE ${colors.reset}`,
+  )
+
   const docs = [
     `${colors.vueGreen}📖${colors.reset} ${colors.bright}README.md${colors.reset} - Guía completa en inglés 🇺🇸`,
     `${colors.tailwindBlue}📖${colors.reset} ${colors.bright}README.es.md${colors.reset} - Guía completa en español 🇪🇸`,
     `${colors.vueGreen}🏗️${colors.reset}  ${colors.bright}ARCHITECTURE.md${colors.reset} - Arquitectura del proyecto 🎯`,
-    `${colors.tailwindBlue}🎨${colors.reset} ${colors.bright}TABLER_ICONS_GUIDE.md${colors.reset} - Guía de iconos ✨`
+    `${colors.tailwindBlue}🎨${colors.reset} ${colors.bright}TABLER_ICONS_GUIDE.md${colors.reset} - Guía de iconos ✨`,
   ]
-  
+
   for (const doc of docs) {
     await delay(250)
     log(`  ${doc}`)
@@ -197,17 +213,19 @@ async function showDocumentation() {
 }
 
 async function showFeatures() {
-  log(`\n${colors.bright}${colors.bgVueGreen}${colors.white} ⚡ CARACTERÍSTICAS INCLUIDAS ${colors.reset}`)
-  
+  log(
+    `\n${colors.bright}${colors.bgVueGreen}${colors.white} ⚡ CARACTERÍSTICAS INCLUIDAS ${colors.reset}`,
+  )
+
   const features = [
     `${colors.vueGreen}✅${colors.reset} Composables reutilizables (useProgress)`,
     `${colors.tailwindBlue}✅${colors.reset} Servicios organizados (notificationService)`,
     `${colors.vueGreen}✅${colors.reset} Constantes centralizadas`,
     `${colors.tailwindBlue}✅${colors.reset} Utilidades helpers`,
     `${colors.vueGreen}✅${colors.reset} Estructura escalable por features`,
-    `${colors.tailwindBlue}✅${colors.reset} ${gradient('¡Y mucho más!')} 🎁`
+    `${colors.tailwindBlue}✅${colors.reset} ${gradient('¡Y mucho más!')} 🎁`,
   ]
-  
+
   for (const feature of features) {
     await delay(200)
     log(`  ${feature}`)
@@ -217,20 +235,20 @@ async function showFeatures() {
 
 async function showFinalMessage() {
   console.log(`\n${colors.dim}${'═'.repeat(65)}${colors.reset}`)
-  
+
   const finalMessages = [
     `${gradient('¡Gracias por usar StartKit Vue + Tailwind!')} 💖`,
     `${colors.gray}Hecho con ❤️  por ${colors.bright}${colors.darkGreen}eCortes.cl${colors.reset}${colors.gray} para la comunidad Vue.js${colors.reset}`,
     `${colors.vueGreen}🌐 Visita: ${colors.bright}https://ecortes.cl${colors.reset}`,
     `${colors.tailwindBlue}⭐ GitHub: ${colors.bright}https://github.com/ecortescl/startkit-vue-tailwind${colors.reset}`,
-    `${colors.darkGreen}🌟 ¡Crea algo extraordinario! 🌟${colors.reset}`
+    `${colors.darkGreen}🌟 ¡Crea algo extraordinario! 🌟${colors.reset}`,
   ]
-  
+
   for (const message of finalMessages) {
     await delay(300)
     log(`${' '.repeat(8)}${message}`)
   }
-  
+
   console.log(`${colors.dim}${'═'.repeat(65)}${colors.reset}\n`)
 }
 
@@ -241,7 +259,7 @@ async function main() {
 
   // Banner animado
   await showBanner()
-  
+
   // Mostrar información del proyecto
   await showProjectInfo(projectName)
 
@@ -283,39 +301,45 @@ async function main() {
 
     // Mostrar éxito
     await showSuccess(projectName)
-    
+
     // Características incluidas
     await showFeatures()
-    
+
     // Próximos pasos
     await showNextSteps(projectName)
-    
+
     // Documentación
     await showDocumentation()
-    
+
     // Mensaje final
     await showFinalMessage()
-
   } catch (error) {
     spinner.stop()
-    log(`\n${colors.bgRed}${colors.white}${colors.bright} 💥 ERROR INESPERADO ${colors.reset}`, colors.red)
+    log(
+      `\n${colors.bgRed}${colors.white}${colors.bright} 💥 ERROR INESPERADO ${colors.reset}`,
+      colors.red,
+    )
     log(`${colors.red}${error.message}${colors.reset}`)
-    log(`${colors.gray}📧 Por favor, reporta este error en nuestro GitHub si persiste.${colors.reset}`)
-    log(`${colors.tailwindBlue}🔗 https://github.com/ecortescl/startkit-vue-tailwind/issues${colors.reset}`)
+    log(
+      `${colors.gray}📧 Por favor, reporta este error en nuestro GitHub si persiste.${colors.reset}`,
+    )
+    log(
+      `${colors.tailwindBlue}🔗 https://github.com/ecortescl/startkit-vue-tailwind/issues${colors.reset}`,
+    )
     process.exit(1)
   }
 }
 
 async function copyTemplate(src, dest) {
   const stat = fs.statSync(src)
-  
+
   if (stat.isDirectory()) {
     // Crear directorio de destino
     fs.mkdirSync(dest, { recursive: true })
-    
+
     // Copiar todos los archivos del directorio
     const files = fs.readdirSync(src)
-    
+
     for (const file of files) {
       const srcPath = path.join(src, file)
       const destPath = path.join(dest, file)
@@ -330,19 +354,19 @@ async function copyTemplate(src, dest) {
 async function updatePackageJson(projectDir, projectName) {
   const packageJsonPath = path.join(projectDir, 'package.json')
   const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'))
-  
+
   // Actualizar información del proyecto
   packageJson.name = projectName
   packageJson.version = '0.0.0'
   packageJson.private = true
-  
+
   // Remover campos específicos del template
   delete packageJson.bin
   delete packageJson.files
   delete packageJson.keywords
   delete packageJson.publishConfig
-  
+
   fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2))
 }
 
-main().catch(console.error) 
+main().catch(console.error)
