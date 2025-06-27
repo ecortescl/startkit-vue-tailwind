@@ -19,7 +19,7 @@
 
 ## 🛠️ Tecnologías
 
-- **Frontend Framework**: Vue.js 3 (Options API)
+- **Frontend Framework**: Vue.js 3 (Composition API)
 - **Styling**: Tailwind CSS 4.x
 - **Build Tool**: Vite 7.x
 - **Icons**: Tabler Icons Vue

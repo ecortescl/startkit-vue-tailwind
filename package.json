@@ -1,25 +1,43 @@
 {
-  "name": "startkit-vue-tailwind",
-  "version": "0.0.0",
-  "private": true,
+  "name": "create-startkit-vue",
+  "version": "1.0.0",
+  "description": "A modern starter kit for Vue.js applications with Tailwind CSS, built following Clean Code and SOLID principles",
   "type": "module",
+  "bin": {
+    "create-startkit-vue": "./bin/create-startkit-vue.js"
+  },
+  "files": [
+    "bin",
+    "template"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "format": "prettier --write src/"
+    "test": "node bin/create-startkit-vue.js test-project",
+    "prepublishOnly": "echo 'Ready to publish create-startkit-vue'"
   },
-  "dependencies": {
-    "@tabler/icons-vue": "^3.34.0",
-    "@tailwindcss/vite": "^4.1.11",
-    "tailwindcss": "^4.1.11",
-    "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+  "keywords": [
+    "vue",
+    "tailwind",
+    "template",
+    "starter",
+    "clean-code",
+    "solid",
+    "vite",
+    "cli"
+  ],
+  "author": "eCortes.cl <contacto@ecortes.cl>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ecortescl/startkit-vue-tailwind.git"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^6.0.0",
-    "prettier": "3.5.3",
-    "vite": "^7.0.0",
-    "vite-plugin-vue-devtools": "^7.7.7"
+  "bugs": {
+    "url": "https://github.com/ecortescl/startkit-vue-tailwind/issues"
+  },
+  "homepage": "https://github.com/ecortescl/startkit-vue-tailwind#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

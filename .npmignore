@@ -1,0 +1,18 @@
+# Archivos de desarrollo
+src/
+public/
+index.html
+vite.config.js
+jsconfig.json
+node_modules/
+.git/
+.vscode/
+.DS_Store
+
+# Archivos específicos del desarrollo
+*.log
+.env*
+dist/
+
+# Mantener solo los archivos necesarios para el CLI
+# bin/ y template/ se incluyen automáticamente por el campo "files" en package.json 
