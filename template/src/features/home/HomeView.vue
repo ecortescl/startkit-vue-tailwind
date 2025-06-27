@@ -14,29 +14,19 @@
 
         <!-- Título principal -->
         <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4 font-montserrat">
-          Próximamente
+          Sistema de Componentes
         </h1>
 
         <!-- Subtítulo -->
         <p class="text-xl text-gray-600 mb-8 font-inter">
-          Comienza a crear tu página
+          Alertas e Inputs con diseño glassmorphism
         </p>
 
         <!-- Descripción -->
         <p class="text-gray-500 mb-8 leading-relaxed font-opensans">
-          Estamos trabajando en algo increíble. Pronto podrás disfrutar de una experiencia única 
-          que te ayudará a construir la página de tus sueños.
+          Explora nuestro sistema moderno de componentes con efectos glassmorphism, 
+          validaciones inteligentes y arquitectura SOLID.
         </p>
-
-        <!-- Botón de acción -->
-        <div class="mb-8">
-          <button 
-            @click="handleNotifyMe"
-            class="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg font-inter"
-          >
-            Notificarme cuando esté listo
-          </button>
-        </div>
 
         <!-- Indicador de progreso -->
         <div class="mb-8">
@@ -45,25 +35,6 @@
             <div class="bg-gradient-to-r from-blue-500 to-indigo-600 h-2 rounded-full transition-all duration-1000 ease-out" :style="{ width: progress + '%' }"></div>
           </div>
           <div class="text-sm text-gray-500 mt-2 font-roboto">{{ progress }}% completado</div>
-        </div>
-
-        <!-- Redes sociales o contacto -->
-        <div class="flex justify-center space-x-6 text-gray-400">
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-            </svg>
-          </a>
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-            </svg>
-          </a>
-          <a href="#" class="hover:text-blue-500 transition-colors duration-300">
-            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-            </svg>
-          </a>
         </div>
       </div>
     </div>
@@ -189,88 +160,203 @@
             </button>
           </div>
         </div>
+      </div>
+    </div>
 
-        <!-- Botones adicionales para casos específicos -->
-        <div class="flex flex-wrap justify-center gap-4">
-          <button
-            @click="showMultipleAlerts"
-            class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
-          >
-            Múltiples Alertas
-          </button>
-          <button
-            @click="showPersistentAlert"
-            class="bg-gradient-to-r from-indigo-500 to-blue-500 hover:from-indigo-600 hover:to-blue-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
-          >
-            Alerta Persistente
-          </button>
-          <button
-            @click="showCustomAlert"
-            class="bg-gradient-to-r from-green-500 to-teal-500 hover:from-green-600 hover:to-teal-600 text-white font-medium py-2 px-6 rounded-lg transition-all duration-200 transform hover:scale-105"
-          >
-            Alerta Personalizada
-          </button>
+    <!-- Sección de Showcase de Inputs -->
+    <div class="bg-gradient-to-br from-blue-50 to-indigo-100 py-16">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-4">Sistema de Inputs Moderno</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Inputs con diseño glassmorphism, validaciones inteligentes y experiencia de usuario superior.
+            Incluye selector de países, validación de passwords y formateo automático.
+          </p>
         </div>
 
-        <!-- Ejemplo de código -->
-        <div class="mt-12 bg-gray-50 rounded-xl p-6">
-          <div class="flex items-center justify-between mb-4">
-            <h3 class="font-semibold text-gray-800">Ejemplo de Uso</h3>
-            <button
-              @click="copyCodeExample"
-              class="bg-blue-500 hover:bg-blue-600 text-white text-sm px-3 py-1 rounded-md transition-colors duration-200"
-            >
-              {{ copied ? '¡Copiado!' : 'Copiar' }}
-            </button>
-          </div>
+        <!-- Formulario de Demostración -->
+        <div class="bg-white/40 backdrop-blur-xl rounded-2xl p-8 border border-white/20 shadow-lg mb-8">
+          <h3 class="text-xl font-semibold text-gray-800 mb-6 flex items-center">
+            <IconSettings :size="24" class="mr-3" />
+            Formulario de Demostración
+          </h3>
           
-          <div class="bg-gray-900 rounded-lg p-4 text-sm overflow-x-auto">
-            <pre class="text-green-400"><code><span class="text-blue-300">&lt;template&gt;</span>
-  <span class="text-yellow-300">&lt;div&gt;</span>
-    <span class="text-gray-400">&lt;!-- Tu contenido de la vista --&gt;</span>
-    <span class="text-yellow-300">&lt;button</span> <span class="text-red-300">@click=</span><span class="text-green-300">"showAlert"</span><span class="text-yellow-300">&gt;</span>Mostrar Alerta<span class="text-yellow-300">&lt;/button&gt;</span>
-    
-    <span class="text-gray-400">&lt;!-- Sistema de Alertas --&gt;</span>
-    <span class="text-yellow-300">&lt;AlertSystem</span> <span class="text-red-300">ref=</span><span class="text-green-300">"alertSystem"</span> <span class="text-yellow-300">/&gt;</span>
-  <span class="text-yellow-300">&lt;/div&gt;</span>
-<span class="text-blue-300">&lt;/template&gt;</span>
+          <form @submit.prevent="handleFormSubmit" class="space-y-6">
+            <!-- Fila 1: Texto y Número -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <TextInput
+                v-model="formData.name"
+                label="Nombre Completo"
+                placeholder="Ingresa tu nombre completo..."
+                required
+                :error="formErrors.name"
+                help-text="Mínimo 2 caracteres, máximo 50"
+              />
+              
+              <NumberInput
+                v-model="formData.age"
+                label="Edad"
+                placeholder="Tu edad..."
+                :min="18"
+                :max="120"
+                :allow-decimals="false"
+                :error="formErrors.age"
+                help-text="Entre 18 y 120 años"
+              />
+            </div>
 
-<span class="text-blue-300">&lt;script&gt;</span>
-<span class="text-purple-300">import</span> AlertSystem <span class="text-purple-300">from</span> <span class="text-green-300">'@/shared/components/AlertSystem.vue'</span>
-<span class="text-purple-300">import</span> { alertService } <span class="text-purple-300">from</span> <span class="text-green-300">'@/shared/services/alertService.js'</span>
+            <!-- Fila 2: Teléfono y Email -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <PhoneInput
+                v-model="formData.phone"
+                label="Número de Teléfono"
+                placeholder="987654321"
+                default-country="CL"
+                required
+                :error="formErrors.phone"
+                help-text="Selecciona tu país y ingresa el número"
+                @country-change="handleCountryChange"
+              />
+              
+              <TextInput
+                v-model="formData.email"
+                label="Correo Electrónico"
+                placeholder="tu@email.com"
+                type="email"
+                required
+                :error="formErrors.email"
+                help-text="Formato: usuario@dominio.com"
+              />
+            </div>
 
-<span class="text-purple-300">export default</span> {
-  <span class="text-red-300">components:</span> {
-    AlertSystem
-  },
-  <span class="text-red-300">methods:</span> {
-    <span class="text-yellow-300">showAlert</span>() {
-      <span class="text-gray-400">// Alertas básicas</span>
-      alertService.<span class="text-yellow-300">showSuccess</span>(<span class="text-green-300">'¡Operación exitosa!'</span>)
-      alertService.<span class="text-yellow-300">showDanger</span>(<span class="text-green-300">'Error crítico'</span>)
-      alertService.<span class="text-yellow-300">showWarning</span>(<span class="text-green-300">'Atención requerida'</span>)
-      alertService.<span class="text-yellow-300">showInfo</span>(<span class="text-green-300">'Información importante'</span>)
-    }
-  },
-  <span class="text-red-300">mounted</span>() {
-    <span class="text-gray-400">// Registrar el componente en el servicio</span>
-    alertService.<span class="text-yellow-300">registerAlertComponent</span>(<span class="text-purple-300">this</span>.$refs.alertSystem)
-    
-    <span class="text-gray-400">// Configurar posición por defecto</span>
-    alertService.<span class="text-yellow-300">setDefaultPosition</span>(<span class="text-green-300">'top-right'</span>)
-  }
-}
-<span class="text-blue-300">&lt;/script&gt;</span></code></pre>
+            <!-- Fila 3: Fecha y Hora -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <DateInput
+                v-model="formData.birthDate"
+                label="Fecha de Nacimiento"
+                required
+                :max="today"
+                :error="formErrors.birthDate"
+                help-text="Selecciona tu fecha de nacimiento"
+              />
+              
+              <TimeInput
+                v-model="formData.preferredTime"
+                label="Hora Preferida de Contacto"
+                :error="formErrors.preferredTime"
+                help-text="¿A qué hora prefieres que te contactemos?"
+              />
+            </div>
+
+            <!-- Fila 4: Password -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <PasswordInput
+                v-model="formData.password"
+                label="Contraseña"
+                placeholder="Crea una contraseña segura..."
+                required
+                :validate-strength="true"
+                :min-length="8"
+                :error="formErrors.password"
+                help-text="Mínimo 8 caracteres con mayúsculas, minúsculas y números"
+              />
+              
+              <PasswordInput
+                v-model="formData.confirmPassword"
+                label="Confirmar Contraseña"
+                placeholder="Confirma tu contraseña..."
+                required
+                :error="formErrors.confirmPassword"
+                help-text="Debe coincidir con la contraseña anterior"
+              />
+            </div>
+
+            <!-- Botones de Acción -->
+            <div class="flex justify-between items-center pt-6 border-t border-white/20">
+              <button
+                type="button"
+                @click="resetForm"
+                class="px-6 py-3 bg-gray-500 hover:bg-gray-600 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center space-x-2"
+              >
+                <IconRefresh :size="18" />
+                <span>Limpiar</span>
+              </button>
+              
+              <div class="flex space-x-4">
+                <button
+                  type="button"
+                  @click="validateForm"
+                  class="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-xl font-semibold transition-colors duration-200 flex items-center space-x-2"
+                >
+                  <IconCheck :size="18" />
+                  <span>Validar</span>
+                </button>
+                
+                <button
+                  type="submit"
+                  class="px-8 py-3 bg-gradient-to-r from-emerald-500 to-emerald-600 hover:from-emerald-600 hover:to-emerald-700 text-white rounded-xl font-semibold shadow-lg hover:shadow-emerald-500/25 transform hover:scale-105 transition-all duration-300 flex items-center space-x-2"
+                >
+                  <IconSend :size="18" />
+                  <span>Enviar Formulario</span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+        <!-- Información técnica y código de ejemplo -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <!-- Características técnicas -->
+          <div class="bg-white/40 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4 flex items-center">
+              <IconStar :size="20" class="mr-2" />
+              Características de los Inputs
+            </h3>
+            <ul class="space-y-3 text-sm text-gray-700">
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Efectos glassmorphism con múltiples capas
+              </li>
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Validaciones en tiempo real
+              </li>
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Selector de países con banderas
+              </li>
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Toggle de visibilidad en passwords
+              </li>
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Formateo automático de números
+              </li>
+              <li class="flex items-center">
+                <IconCheck :size="16" class="text-emerald-600 mr-2 flex-shrink-0" />
+                Arquitectura modular reutilizable
+              </li>
+            </ul>
           </div>
-          
-                     <div class="mt-4 grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-600">
-             <span>Diseño glassmorphism moderno</span>
-             <span>Efectos blur avanzados</span>
-             <span>Íconos con contenedores elegantes</span>
-             <span>Animaciones fluidas</span>
-             <span>Posicionamiento dinámico</span>
-             <span>Arquitectura minimalista</span>
-           </div>
+
+          <!-- Ejemplo de código -->
+          <div class="bg-gray-900/95 backdrop-blur-xl rounded-2xl p-6 border border-white/20 shadow-lg">
+            <div class="flex items-center justify-between mb-4">
+              <h3 class="text-lg font-semibold text-white flex items-center">
+                <IconCode :size="20" class="mr-2" />
+                Uso de Componentes
+              </h3>
+              <button
+                @click="copyInputCode"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-700 text-white text-xs rounded-lg transition-colors duration-200 flex items-center space-x-1"
+              >
+                <IconCopy :size="14" />
+                <span>{{ inputCodeCopied ? '¡Copiado!' : 'Copiar' }}</span>
+              </button>
+            </div>
+            <pre class="text-sm text-gray-300 overflow-x-auto"><code>{{ inputCodeExample }}</code></pre>
+          </div>
         </div>
       </div>
     </div>
@@ -287,11 +373,28 @@ import { notificationService } from '@/shared/services/notificationService.js'
 import { alertService } from '@/shared/services/alertService.js'
 import { progressService } from '@/shared/services/progressService.js'
 import { PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION } from '@/core/constants'
+
+// Importar todos los inputs
+import {
+  TextInput,
+  NumberInput,
+  DateInput,
+  TimeInput,
+  PasswordInput,
+  PhoneInput
+} from '@/shared/components/inputs'
+
 import { 
   IconCheck, 
   IconAlertTriangle, 
   IconAlertCircle, 
-  IconInfoCircle 
+  IconInfoCircle,
+  IconSettings,
+  IconRefresh,
+  IconSend,
+  IconStar,
+  IconCode,
+  IconCopy
 } from '@tabler/icons-vue'
 
 export default {
@@ -299,22 +402,92 @@ export default {
   components: {
     IconShowcase,
     AlertSystem,
+    TextInput,
+    NumberInput,
+    DateInput,
+    TimeInput,
+    PasswordInput,
+    PhoneInput,
     IconCheck,
     IconAlertTriangle,
     IconAlertCircle,
-    IconInfoCircle
+    IconInfoCircle,
+    IconSettings,
+    IconRefresh,
+    IconSend,
+    IconStar,
+    IconCode,
+    IconCopy
   },
   data() {
     return {
       progress: 0,
-      copied: false,
-      position: 'top-right'
+      position: 'top-right',
+      inputCodeCopied: false,
+      
+      // Datos del formulario
+      formData: {
+        name: '',
+        age: '',
+        phone: '',
+        email: '',
+        birthDate: '',
+        preferredTime: '',
+        password: '',
+        confirmPassword: ''
+      },
+      
+      // Errores del formulario
+      formErrors: {
+        name: '',
+        age: '',
+        phone: '',
+        email: '',
+        birthDate: '',
+        preferredTime: '',
+        password: '',
+        confirmPassword: ''
+      }
+    }
+  },
+  computed: {
+    today() {
+      return new Date().toISOString().split('T')[0]
+    },
+    inputCodeExample() {
+      return `// Importar componentes
+import {
+  TextInput,
+  NumberInput,
+  DateInput,
+  TimeInput,
+  PasswordInput,
+  PhoneInput
+} from '@/shared/components/inputs'
+
+// Usar en template
+<TextInput
+  v-model="nombre"
+  label="Nombre"
+  placeholder="Tu nombre..."
+  required
+/>
+
+<PhoneInput
+  v-model="telefono"
+  label="Teléfono"
+  default-country="CL"
+  @country-change="onCountryChange"
+/>
+
+<PasswordInput
+  v-model="password"
+  label="Contraseña"
+  :validate-strength="true"
+/>`
     }
   },
   methods: {
-    handleNotifyMe() {
-      notificationService.handleNotifyMe()
-    },
     animateProgress() {
       progressService.animateProgress(this, 'progress', PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION)
     },
@@ -348,39 +521,6 @@ export default {
       )
     },
     
-    showMultipleAlerts() {
-      // Mostrar múltiples alertas con diferentes retrasos
-      setTimeout(() => {
-        alertService.showInfo('Primera alerta en la secuencia', 'Alerta 1')
-      }, 100)
-      
-      setTimeout(() => {
-        alertService.showWarning('Segunda alerta con advertencia', 'Alerta 2')
-      }, 300)
-      
-      setTimeout(() => {
-        alertService.showSuccess('Tercera alerta de éxito', 'Alerta 3')
-      }, 500)
-    },
-    
-    showPersistentAlert() {
-      alertService.showAlert({
-        type: 'warning',
-        title: 'Alerta Persistente',
-        message: 'Esta alerta no se cierra automáticamente. Debes cerrarla manualmente haciendo clic en la X.',
-        duration: 0 // 0 significa que no se cierra automáticamente
-      })
-    },
-    
-    showCustomAlert() {
-      alertService.showAlert({
-        type: 'info',
-        title: 'Alerta Personalizada',
-        message: 'Esta alerta tiene una duración personalizada de 10 segundos y un mensaje especial.',
-        duration: 10000
-      })
-    },
-    
     setPosition(newPosition) {
       this.position = newPosition
       alertService.setDefaultPosition(newPosition)
@@ -396,54 +536,146 @@ export default {
       }
       return labels[position] || position
     },
-    
-    async copyCodeExample() {
-      const codeExample = `<template>
-  <div>
-    <!-- Tu contenido de la vista -->
-    <button @click="showAlert">Mostrar Alerta</button>
-    
-    <!-- Sistema de Alertas -->
-    <AlertSystem ref="alertSystem" />
-  </div>
-</template>
 
-<script>
-import AlertSystem from '@/shared/components/AlertSystem.vue'
-import { alertService } from '@/shared/services/alertService.js'
+    // Métodos para el formulario de inputs
+    handleFormSubmit() {
+      if (this.validateForm()) {
+        alertService.showSuccess(
+          'Todos los campos han sido validados correctamente. El formulario está listo para enviar.',
+          'Formulario Válido'
+        )
+        console.log('Datos del formulario:', this.formData)
+      } else {
+        alertService.showWarning(
+          'Por favor, revisa los campos marcados con error antes de continuar.',
+          'Errores en el Formulario'
+        )
+      }
+    },
 
-export default {
-  components: {
-    AlertSystem
-  },
-  methods: {
-    showAlert() {
-      // Alertas básicas
-      alertService.showSuccess('¡Operación exitosa!')
-      alertService.showDanger('Error crítico')
-      alertService.showWarning('Atención requerida')
-      alertService.showInfo('Información importante')
-    }
-  },
-  mounted() {
-    // Registrar el componente en el servicio
-    alertService.registerAlertComponent(this.$refs.alertSystem)
-    
-    // Configurar posición por defecto
-    alertService.setDefaultPosition('top-right')
-  }
-}
-<\/script>`
-      
+    validateForm() {
+      this.resetFormErrors()
+      let isValid = true
+
+      // Validar nombre
+      if (!this.formData.name.trim()) {
+        this.formErrors.name = 'El nombre es requerido'
+        isValid = false
+      } else if (this.formData.name.trim().length < 2) {
+        this.formErrors.name = 'El nombre debe tener al menos 2 caracteres'
+        isValid = false
+      } else if (this.formData.name.trim().length > 50) {
+        this.formErrors.name = 'El nombre no puede exceder 50 caracteres'
+        isValid = false
+      }
+
+      // Validar edad
+      if (!this.formData.age) {
+        this.formErrors.age = 'La edad es requerida'
+        isValid = false
+      } else {
+        const age = parseInt(this.formData.age)
+        if (age < 18 || age > 120) {
+          this.formErrors.age = 'La edad debe estar entre 18 y 120 años'
+          isValid = false
+        }
+      }
+
+      // Validar email
+      if (!this.formData.email.trim()) {
+        this.formErrors.email = 'El email es requerido'
+        isValid = false
+      } else {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+        if (!emailRegex.test(this.formData.email)) {
+          this.formErrors.email = 'Formato de email inválido'
+          isValid = false
+        }
+      }
+
+      // Validar teléfono
+      if (!this.formData.phone.trim()) {
+        this.formErrors.phone = 'El teléfono es requerido'
+        isValid = false
+      }
+
+      // Validar fecha de nacimiento
+      if (!this.formData.birthDate) {
+        this.formErrors.birthDate = 'La fecha de nacimiento es requerida'
+        isValid = false
+      } else {
+        const birthDate = new Date(this.formData.birthDate)
+        const today = new Date()
+        if (birthDate >= today) {
+          this.formErrors.birthDate = 'La fecha debe ser anterior a hoy'
+          isValid = false
+        }
+      }
+
+      // Validar contraseña
+      if (!this.formData.password) {
+        this.formErrors.password = 'La contraseña es requerida'
+        isValid = false
+      } else if (this.formData.password.length < 8) {
+        this.formErrors.password = 'La contraseña debe tener al menos 8 caracteres'
+        isValid = false
+      }
+
+      // Validar confirmación de contraseña
+      if (!this.formData.confirmPassword) {
+        this.formErrors.confirmPassword = 'Debes confirmar la contraseña'
+        isValid = false
+      } else if (this.formData.password !== this.formData.confirmPassword) {
+        this.formErrors.confirmPassword = 'Las contraseñas no coinciden'
+        isValid = false
+      }
+
+      return isValid
+    },
+
+    resetFormErrors() {
+      this.formErrors = {
+        name: '',
+        age: '',
+        phone: '',
+        email: '',
+        birthDate: '',
+        preferredTime: '',
+        password: '',
+        confirmPassword: ''
+      }
+    },
+
+    resetForm() {
+      this.formData = {
+        name: '',
+        age: '',
+        phone: '',
+        email: '',
+        birthDate: '',
+        preferredTime: '',
+        password: '',
+        confirmPassword: ''
+      }
+      this.resetFormErrors()
+      alertService.showInfo('Formulario limpiado correctamente', 'Formulario Reiniciado')
+    },
+
+    handleCountryChange(country) {
+      console.log('País seleccionado:', country)
+      alertService.showInfo(`País cambiado a: ${country.name} (${country.phoneCode})`, 'País Actualizado')
+    },
+
+    async copyInputCode() {
       try {
-        await navigator.clipboard.writeText(codeExample)
-        this.copied = true
+        await navigator.clipboard.writeText(this.inputCodeExample)
+        this.inputCodeCopied = true
         setTimeout(() => {
-          this.copied = false
+          this.inputCodeCopied = false
         }, 2000)
+        alertService.showSuccess('Código copiado al portapapeles', 'Copiado')
       } catch (err) {
         console.error('Error al copiar:', err)
-        // Fallback para navegadores que no soporten clipboard API
         alertService.showInfo('Código seleccionado para copiar manualmente')
       }
     }
@@ -454,9 +686,12 @@ export default {
     // Registrar el componente de alertas en el servicio
     alertService.registerAlertComponent(this.$refs.alertSystem)
     
+    // Configurar posición por defecto
+    alertService.setDefaultPosition('top-right')
+    
     // Mostrar alerta de bienvenida
     setTimeout(() => {
-      alertService.showWelcomeInfo()
+      alertService.showInfo('¡Bienvenido! Explora nuestros componentes con efectos glassmorphism.', '¡Bienvenido!')
     }, 2000)
   }
 }
