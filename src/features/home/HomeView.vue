@@ -76,34 +76,22 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue'
-import IconShowcase from '@/components/IconShowcase.vue'
+import { onMounted } from 'vue'
+import IconShowcase from '@/shared/components/IconShowcase.vue'
+import { useProgress } from '@/shared/composables/useProgress.js'
+import { notificationService } from '@/shared/services/notificationService.js'
+import { PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION } from '@/core/constants'
 
-// Estado reactivo para el progreso
-const progress = ref(0)
+// Usar el composable de progreso
+const { progress, animateProgress } = useProgress(PROGRESS_TARGET, PROGRESS_ANIMATION_DURATION)
 
 // Función para manejar el botón de notificación
 const handleNotifyMe = () => {
-  alert('¡Gracias por tu interés! Te notificaremos cuando esté listo.')
+  notificationService.handleNotifyMe()
 }
 
-// Animación del progreso al montar el componente
+// Iniciar animación al montar el componente
 onMounted(() => {
-  // Simular progreso de desarrollo
-  const targetProgress = 75 // 75% completado
-  const duration = 2000 // 2 segundos
-  const steps = 60 // 60 pasos para una animación suave
-  const increment = targetProgress / steps
-  const stepDuration = duration / steps
-
-  let currentStep = 0
-  const timer = setInterval(() => {
-    currentStep++
-    progress.value = Math.min(currentStep * increment, targetProgress)
-    
-    if (currentStep >= steps) {
-      clearInterval(timer)
-    }
-  }, stepDuration)
+  animateProgress()
 })
 </script>
