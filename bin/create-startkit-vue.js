@@ -268,7 +268,7 @@ async function main() {
     // Mostrar éxito
     await showSuccess(projectName)
 
-    // Características incluidas
+    // Included Features
     await showFeatures()
 
     // Próximos pasos

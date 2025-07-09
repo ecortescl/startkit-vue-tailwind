@@ -30,7 +30,7 @@
                 prefix="+"
                 :duration="2500"
               >
-                Proyectos
+                Projects
               </CountUpNumber>
               
               <CountUpNumber 
@@ -38,7 +38,7 @@
                 suffix="%"
                 :duration="2000"
               >
-                Satisfacción
+                Satisfaction
               </CountUpNumber>
               
               <CountUpNumber 
@@ -46,7 +46,7 @@
                 suffix="/7"
                 :duration="1500"
               >
-                Soporte
+                Support
               </CountUpNumber>
             </div>
           </div>
@@ -61,7 +61,7 @@
               <template #icon-left>
                 <IconCalendar class="w-5 h-5" />
               </template>
-              Agenda una Demo
+              Schedule a Demo
             </BaseButton>
             
             <BaseButton 
@@ -72,7 +72,7 @@
               <template #icon-left>
                 <IconFolder class="w-5 h-5" />
               </template>
-              Ver Portafolio
+              View Portfolio
             </BaseButton>
           </div>
         </div>
@@ -98,8 +98,8 @@ let particles = [];
 let animationFrameId;
 
 const handleFormSubmit = async (formData) => {
-  console.log('Formulario enviado:', formData);
-  // Aquí iría la lógica para procesar el formulario
+  console.log('Form submitted:', formData);
+  // Here would go the logic to process the form
 };
 
 class Particle {

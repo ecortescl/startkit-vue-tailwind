@@ -51,7 +51,7 @@
             <div class="backdrop-blur-md bg-dark-background/40 p-8 rounded-2xl border border-white/5 from-bottom">
               <div class="flex items-center justify-between mb-8">
                 <h3 class="text-2xl font-bold gradient-text">
-                  SoftTech en Números
+                  SoftTech in Numbers
                 </h3>
                 <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center transform rotate-12">
                   <IconChartBar class="w-6 h-6 text-primary" />
@@ -162,28 +162,28 @@ const companyValues = [
 const companyStats = [
   {
     value: '+10',
-    label: 'Años de experiencia',
+    label: 'Years of experience',
     icon: IconCertificate
   },
   {
     value: '98%',
-    label: 'Clientes satisfechos',
+    label: 'Satisfied clients',
     icon: IconTrophy
   },
   {
     value: '+150',
-    label: 'Proyectos completados',
+    label: 'Completed projects',
     icon: IconDeviceLaptop
   },
   {
     value: '+40',
-    label: 'Expertos en tecnología',
+    label: 'Technology experts',
     icon: IconUsers
   }
 ];
 
 onMounted(() => {
-  // Inicializar animaciones basadas en scroll
+  // Initialize scroll-based animations
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {

@@ -20,6 +20,11 @@
 
       <!-- Form -->
       <form @submit.prevent="handleSubmit" class="space-y-4 md:space-y-6">
+        <!-- Error Message -->
+        <div v-if="errorMessage" class="p-3 bg-red-500/10 border border-red-500/20 rounded-lg text-red-500 text-sm">
+          {{ errorMessage }}
+        </div>
+
         <!-- Input Fields -->
         <div class="space-y-3 md:space-y-4">
           <div 
@@ -34,6 +39,7 @@
             <div class="field-content">
               <label :for="field.name" class="field-label">
                 {{ field.label }}
+                <span v-if="field.required" class="text-red-500">*</span>
               </label>
               <component
                 :is="field.type === 'textarea' ? 'textarea' : 'input'"
@@ -45,6 +51,7 @@
                 @blur="focusedField = null"
                 :rows="field.type === 'textarea' ? 4 : undefined"
                 class="field-input"
+                :required="field.required"
               />
             </div>
           </div>
@@ -67,6 +74,7 @@
 
 <script setup>
 import { ref, reactive } from 'vue';
+import { ContactService } from '@/core/services/contact/contact.service';
 import {
   IconRocket,
   IconUserCircle,
@@ -86,7 +94,7 @@ const props = defineProps({
   }
 });
 
-const emit = defineEmits(['submit']);
+const emit = defineEmits(['submit', 'success', 'error']);
 
 const fields = [
   {
@@ -94,21 +102,24 @@ const fields = [
     type: 'text',
     label: 'Name',
     placeholder: 'Your full name',
-    icon: IconUserCircle
+    icon: IconUserCircle,
+    required: true
   },
   {
     name: 'email',
     type: 'email',
     label: 'Email',
     placeholder: 'your@email.com',
-    icon: IconMail
+    icon: IconMail,
+    required: true
   },
   {
     name: 'message',
     type: 'textarea',
     label: 'Message',
     placeholder: 'Describe your project or idea...',
-    icon: IconMessageDots
+    icon: IconMessageDots,
+    required: true
   }
 ];
 
@@ -120,11 +131,42 @@ const formData = reactive({
 
 const focusedField = ref(null);
 const isSubmitting = ref(false);
+const errorMessage = ref('');
+
+const validateForm = () => {
+  for (const field of fields) {
+    if (field.required && !formData[field.name]) {
+      errorMessage.value = `${field.label} is required`;
+      return false;
+    }
+  }
+  if (formData.email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    errorMessage.value = 'Please enter a valid email address';
+    return false;
+  }
+  return true;
+};
 
 const handleSubmit = async () => {
-  isSubmitting.value = true;
   try {
-    await emit('submit', formData);
+    errorMessage.value = '';
+    if (!validateForm()) return;
+
+    isSubmitting.value = true;
+    const response = await ContactService.sendContactForm(formData);
+    
+    emit('submit', formData);
+    emit('success', response);
+
+    // Reset form
+    formData.name = '';
+    formData.email = '';
+    formData.message = '';
+    
+  } catch (error) {
+    console.error('Contact form submission error:', error);
+    errorMessage.value = error.message || 'An error occurred while sending your message';
+    emit('error', error);
   } finally {
     isSubmitting.value = false;
   }

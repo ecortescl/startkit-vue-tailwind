@@ -62,10 +62,10 @@ import { IconCube, IconMenu, IconX } from '@tabler/icons-vue';
 const isMenuOpen = ref(false);
 
 const menuItems = [
-  { href: '#about', text: 'Sobre Nosotros' },
-  { href: '#services', text: 'Servicios' },
+  { href: '#about', text: 'About Us' },
+  { href: '#services', text: 'Services' },
   { href: '#stack', text: 'Stack' },
-  { href: '#contact', text: 'Contacto' }
+  { href: '#contact', text: 'Contact' }
 ];
 
 function scrollToSection(href) {
@@ -82,7 +82,7 @@ function scrollToSection(href) {
   }
 }
 
-// Cerrar menú móvil al redimensionar la ventana a desktop
+// Close mobile menu when resizing to desktop
 window.addEventListener('resize', () => {
   if (window.innerWidth >= 768) { // 768px es el breakpoint md de Tailwind
     isMenuOpen.value = false;

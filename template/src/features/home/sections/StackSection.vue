@@ -8,11 +8,11 @@
       <!-- Section header -->
       <div class="text-center mb-12 md:mb-16">
         <h2 class="inline-block relative font-headings text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in">
-          <span class="relative z-10">Nuestro Stack</span>
+          <span class="relative z-10">Our Stack</span>
           <span class="absolute -bottom-2 left-0 w-full h-3 bg-secondary/10 rounded-full"></span>
         </h2>
         <p class="text-gray-300 max-w-2xl mx-auto animate-fade-in-delay">
-          Trabajamos con las tecnologías más modernas para crear soluciones robustas y escalables
+          We work with the most modern technologies to create robust and scalable solutions
         </p>
       </div>
       
@@ -225,28 +225,28 @@ const categories = [
   {
     name: 'Frontend',
     icon: IconDeviceDesktop,
-    description: 'Tecnologías para crear interfaces de usuario modernas, responsivas y con gran experiencia de usuario.',
+    description: 'Technologies to create modern, responsive user interfaces with great user experience.',
     techs: ['React', 'Vue.js', 'Angular', 'Tailwind CSS', 'TypeScript', 'Next.js']
   },
   {
     name: 'Backend',
     icon: IconServer2,
-    description: 'Soluciones robustas para el servidor que manejan la lógica de negocio y procesan datos eficientemente.',
+    description: 'Robust solutions for the server that handle business logic and process data efficiently.',
     techs: ['Node.js', 'Python', 'PHP', 'Laravel', 'Express', 'Django']
   },
   {
-    name: 'Infraestructura',
+    name: 'Infrastructure',
     icon: IconCloud,
-    description: 'Herramientas para despliegue, escalabilidad y mantenimiento de aplicaciones en la nube.',
+    description: 'Tools for deployment, scalability, and application maintenance in the cloud.',
     techs: ['Docker', 'AWS', 'Firebase', 'Kubernetes', 'CI/CD', 'Serverless']
   }
 ];
 
 // Carousel state
 const currentSlide = ref(0);
-const itemsPerSlide = 6; // 2x3 grid en móvil
+const itemsPerSlide = 6; // 2x3 grid on mobile
 
-// Computed property para dividir las tecnologías en chunks para el carrusel
+// Computed property to split technologies into chunks for the carousel
 const techChunks = computed(() => {
   const chunks = [];
   for (let i = 0; i < technologies.length; i += itemsPerSlide) {

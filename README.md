@@ -17,7 +17,7 @@ When you use this CLI, you get a complete Vue.js project with:
 - **🏗️ Clean Architecture**: Organized following SOLID and Clean Code principles
 - **⚡ Fast Development**: Vite 7.x for instant hot-reload and optimal builds
 - **🧩 Reusable Components**: Pre-built components including modals, forms, and navigation
-- **📱 Mobile-First**: Fully responsive design optimized for all devices
+- **📱  Mobile-First**: Fully responsive design optimized for all devices
 - **🔧 Development Tools**: Vue DevTools integration and professional structure
 - **📦 Scalable**: Modular architecture organized by features and sections
 - **🔍 SEO Ready**: Automatic robots.txt and sitemap.xml generation for better search engine visibility
@@ -38,51 +38,73 @@ yarn create startkit-vue my-vue-app
 pnpm create startkit-vue my-vue-app
 ```
 
-### Navigate and start
-
-```bash
-cd my-vue-app
-npm install  # If not auto-installed
-npm run dev
-```
-
 **That's it!** Your Vue.js project will be running at [http://localhost:5173](http://localhost:5173)
 
-## 🏗️ Generated Project Structure
+## 🏗️ Project Structure
 
+```bash
+create-startkit-vue/
+├── bin/                      # CLI tool
+│   └── create-startkit.js    # Project generator script
+│
+└── template/                 # Project template
+    ├── public/               # Static public assets
+    │   ├── favicon.ico      # Site favicon
+    │   └── robots.txt       # SEO robots file
+    │
+    ├── src/
+    │   ├── assets/          # Project assets
+    │   │   ├── images/      # Image files
+    │   │   │   └── logo.svg # Site logo
+    │   │   └── styles/      # Global styles
+    │   │       └── main.css # Main stylesheet with Tailwind
+    │   │
+    │   ├── core/             # Core application code
+    │   │   ├── constants/    # Global constants
+    │   │   │   └── index.js  # Centralized constants
+    │   │   ├── router/       # Vue Router setup
+    │   │   │   └── index.js  # Route definitions
+    │   │   ├── services/     # API and service layer
+    │   │   │   ├── api/      # Base API configuration
+    │   │   │   ├── contact/  # Contact-related services
+    │   │   │   └── services/ # Business services
+    │   │   └── types/        # Type definitions
+    │   │       └── api.types.js # API-related types
+    │   │
+    │   ├── features/         # Feature-based components
+    │   │   └── home/         # Home page feature
+    │   │       ├── HomeView.vue    # Main view
+    │   │       └── sections/       # Page sections
+    │   │           ├── AboutSection.vue
+    │   │           ├── ContactSection.vue
+    │   │           ├── HeroSection.vue
+    │   │           ├── ServicesSection.vue
+    │   │           └── StackSection.vue
+    │   │
+    │   ├── layout/          # Application layout
+    │   │   └── App.vue      # Root component
+    │   │
+    │   ├── shared/          # Shared/common code
+    │   │   ├── components/  # Reusable components
+    │   │   │   ├── BaseButton.vue   # Button component
+    │   │   │   ├── BaseModal.vue    # Modal component
+    │   │   │   ├── ContactForm.vue  # Contact form
+    │   │   │   ├── CountUpNumber.vue# Number animation
+    │   │   │   ├── Footer.vue       # Site footer
+    │   │   │   └── Navbar.vue       # Navigation
+    │   │   └── utils/       # Utility functions
+    │   │
+    │   └── main.js          # Application entry
+    │
+    ├── .env.example         # Environment variables
+    ├── index.html           # HTML entry point
+    ├── jsconfig.json        # JavaScript config
+    ├── package.json         # Dependencies
+    ├── README.md            # Project docs
+    └── vite.config.js       # Vite config
 ```
-my-vue-app/
-├── src/
-│   ├── core/                    # Application core
-│   │   ├── constants/          # Global constants and configuration
-│   │   ├── router/             # Vue Router setup
-│   │   └── types/              # TypeScript/JSDoc type definitions
-│   ├── shared/                 # Shared resources across features
-│   │   ├── components/         # Reusable UI components
-│   │   │   ├── BaseButton.vue  # Common button component
-│   │   │   ├── BaseModal.vue   # Modal dialog component
-│   │   │   ├── ContactForm.vue # Contact form component
-│   │   │   ├── CountUpNumber.vue # Animated number component
-│   │   │   ├── Footer.vue     # Footer component
-│   │   │   └── Navbar.vue     # Navigation component
-│   │   └── utils/              # Pure utility functions
-│   ├── features/               # Feature-based organization
-│   │   └── home/               # Home page feature
-│   │       └── sections/       # Page sections
-│   │           ├── AboutSection.vue
-│   │           ├── ContactSection.vue
-│   │           ├── HeroSection.vue
-│   │           ├── ServicesSection.vue
-│   │           └── StackSection.vue
-│   ├── layout/                 # Application layouts
-│   └── assets/                 # Static assets (images, icons, styles)
-├── public/                     # Public static files
-├── index.html                  # Main HTML template
-├── package.json               # Dependencies and scripts
-├── vite.config.js            # Vite configuration
-├── tailwind.config.js        # Tailwind CSS configuration
-└── README.md                 # Project documentation
-```
+
+
 
 ## 🛠️ Tech Stack Included
 
@@ -118,17 +140,12 @@ my-vue-app/
 - **🧪 Testable**: Architecture designed for easy unit testing
 - **📚 Documented**: JSDoc annotations and clear README files
 
-## 🛡️ Requirements
-
-- **Node.js**: 18.0.0 or higher
-- **npm**: 6.0.0 or higher (or yarn/pnpm equivalent)
 
 ## 📞 Support & Community
 
 - **🐛 Issues**: [GitHub Issues](https://github.com/ecortescl/startkit-vue-tailwind/issues)
 - **💬 Discussions**: [GitHub Discussions](https://github.com/ecortescl/startkit-vue-tailwind/discussions)
 - **📧 Contact**: hola@ecortes.cl
-- **🌐 Website**: [eCortes.cl](https://ecortes.cl)
 
 ## 📄 License
 
@@ -138,7 +155,7 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 <div align="center">
 
-**Created with ❤️ by [eCortes.cl](https://ecortes.cl) for the Vue.js community**
+**Created with ❤️ by [eCortes.cl](https://github.com/ecortescl) for the Vue.js community**
 
 
 </div>

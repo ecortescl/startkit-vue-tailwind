@@ -26,7 +26,7 @@
           <div class="backdrop-blur-xl bg-dark-background/20 rounded-3xl border border-white/10 p-6 md:p-8">
             <h3 class="text-xl md:text-2xl font-bold mb-6 text-primary flex items-center gap-3">
               <IconMessageCircle class="w-6 h-6" />
-              Información de Contacto
+              Contact Information
             </h3>
             
             <div class="space-y-6">
@@ -36,8 +36,8 @@
                 </div>
                 <div>
                   <h4 class="font-semibold text-white mb-1">Email</h4>
-                  <a href="mailto:contacto@softtech.com" class="text-gray-300 hover:text-primary transition-colors">
-                    contacto@softtech.com
+                  <a href="mailto:contact@softtech.com" class="text-gray-300 hover:text-primary transition-colors">
+                    contact@softtech.com
                   </a>
                 </div>
               </div>

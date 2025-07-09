@@ -36,26 +36,26 @@
           
           <!-- Services -->
           <div>
-            <h3 class="text-lg font-bold mb-6 text-white">Servicios</h3>
+            <h3 class="text-lg font-bold mb-6 text-white">Services</h3>
             <ul class="space-y-3">
               <li>
                 <a href="#services" class="text-gray-300 hover:text-primary transition-colors">
-                  Desarrollo Web
+                  Web Development
                 </a>
               </li>
               <li>
                 <a href="#services" class="text-gray-300 hover:text-primary transition-colors">
-                  Aplicaciones Móviles
+                  Mobile Applications
                 </a>
               </li>
               <li>
                 <a href="#services" class="text-gray-300 hover:text-primary transition-colors">
-                  Inteligencia Artificial
+                  Artificial Intelligence
                 </a>
               </li>
               <li>
                 <a href="#services" class="text-gray-300 hover:text-primary transition-colors">
-                  Consultoría IT
+                  IT Consulting
                 </a>
               </li>
               <li>
@@ -68,16 +68,16 @@
           
           <!-- Company -->
           <div>
-            <h3 class="text-lg font-bold mb-6 text-white">Empresa</h3>
+            <h3 class="text-lg font-bold mb-6 text-white">About Us</h3>
             <ul class="space-y-3">
               <li>
                 <a href="#about" class="text-gray-300 hover:text-primary transition-colors">
-                  Sobre Nosotros
+                  About Us
                 </a>
               </li>
               <li>
                 <a href="#contact" class="text-gray-300 hover:text-primary transition-colors">
-                  Contacto
+                  Contact
                 </a>
               </li>
               <li>
@@ -87,12 +87,12 @@
               </li>
               <li>
                 <a href="#" class="text-gray-300 hover:text-primary transition-colors">
-                  Carreras
+                  Careers
                 </a>
               </li>
               <li>
                 <a href="#" class="text-gray-300 hover:text-primary transition-colors">
-                  Política de Privacidad
+                  Privacy Policy
                 </a>
               </li>
             </ul>
@@ -104,11 +104,11 @@
       <div class="border-t border-white/5 py-6">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-400 text-sm">
-            © 2024 SoftTech. Todos los derechos reservados.
+            © 2024 SoftTech. All rights reserved.
           </p>
           <div class="flex items-center gap-6 text-sm text-gray-400">
-            <a href="#" class="hover:text-primary transition-colors">Términos de Servicio</a>
-            <a href="#" class="hover:text-primary transition-colors">Política de Privacidad</a>
+            <a href="#" class="hover:text-primary transition-colors">Terms of Service</a>
+            <a href="#" class="hover:text-primary transition-colors">Privacy Policy</a>
             <a href="#" class="hover:text-primary transition-colors">Cookies</a>
           </div>
         </div>

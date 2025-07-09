@@ -8,11 +8,11 @@
       <!-- Section header -->
       <div class="text-center mb-12 md:mb-16">
         <h2 class="inline-block relative font-headings text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in">
-          <span class="relative z-10">Nuestros Servicios</span>
+          <span class="relative z-10">Our Services</span>
           <span class="absolute -bottom-2 left-0 w-full h-3 bg-primary/10 rounded-full"></span>
         </h2>
         <p class="text-gray-300 max-w-2xl mx-auto animate-fade-in-delay">
-          Soluciones tecnológicas personalizadas para impulsar tu negocio al siguiente nivel
+          Custom technology solutions to take your business to the next level
         </p>
       </div>
       
@@ -43,7 +43,7 @@
             class="mt-auto self-start px-3 py-1.5 md:px-4 md:py-2 border border-primary text-primary rounded-lg hover:bg-primary/10 transition-colors flex items-center gap-1 md:gap-2 group text-sm md:text-base"
             @click="openModal(service)"
           >
-            Más Información
+            More Information
             <IconArrowRight class="w-3 h-3 md:w-4 md:h-4 transform group-hover:translate-x-1 transition-transform" />
           </button>
         </div>
@@ -63,7 +63,7 @@
         <p class="text-gray-300 text-sm md:text-base">{{ selectedService.description }}</p>
         
         <div>
-          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Características principales:</h5>
+          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Main Features:</h5>
           <ul class="space-y-2 md:space-y-3">
             <li v-for="(feature, i) in selectedService.features" :key="i" class="flex items-start gap-2">
               <IconCircleCheck class="w-4 h-4 md:w-5 md:h-5 text-secondary mt-0.5 flex-shrink-0" />
@@ -73,7 +73,7 @@
         </div>
         
         <div>
-          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Tecnologías utilizadas:</h5>
+          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Technologies Used:</h5>
           <div class="flex flex-wrap gap-2">
             <span 
               v-for="(tech, i) in selectedService.technologies" 
@@ -86,7 +86,7 @@
         </div>
         
         <div>
-          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Proceso de trabajo:</h5>
+          <h5 class="font-bold mb-2 md:mb-3 text-white text-base md:text-lg">Work Process:</h5>
           <ol class="space-y-2 md:space-y-3">
             <li v-for="(step, i) in selectedService.process" :key="i" class="flex items-start gap-2">
               <span class="flex items-center justify-center w-5 h-5 md:w-6 md:h-6 rounded-full bg-primary text-white text-xs md:text-sm font-bold flex-shrink-0">{{ i + 1 }}</span>
@@ -104,13 +104,13 @@
           class="px-3 py-1.5 md:px-4 md:py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm md:text-base"
           @click="showModal = false"
         >
-          Cerrar
+          Close
         </button>
         <button 
           class="px-3 py-1.5 md:px-4 md:py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-1 md:gap-2 text-sm md:text-base"
         >
           <IconCalendar class="w-3 h-3 md:w-4 md:h-4" />
-          Solicitar Servicio
+          Request Service
         </button>
       </template>
     </BaseModal>
