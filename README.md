@@ -20,6 +20,8 @@ When you use this CLI, you get a complete Vue.js project with:
 - **📱 Mobile-First**: Fully responsive design optimized for all devices
 - **🔧 Development Tools**: Vue DevTools integration and professional structure
 - **📦 Scalable**: Modular architecture organized by features and sections
+- **🔍 SEO Ready**: Automatic robots.txt and sitemap.xml generation for better search engine visibility
+- **🤖 AI Development**: Includes context_cursor.txt for enhanced AI coding assistance in Visual Studio Code
 
 ## 🚀 Quick Start
 
@@ -90,6 +92,13 @@ my-vue-app/
 - **Icons**: Tabler Icons Vue
 - **Router**: Vue Router 4
 - **Development**: Vue DevTools integration
+- **SEO Tools**: 
+  - Automatic sitemap.xml generation
+  - Configured robots.txt
+  - SEO-friendly routes
+- **AI Development**:
+  - Preconfigured context_cursor.txt for AI pair programming
+  - Enhanced code completion with AI assistance
 
 ## 🎯 Architecture Principles
 
