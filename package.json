@@ -1,6 +1,6 @@
 {
   "name": "create-startkit-vue",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "CLI tool to create Vue.js projects with Tailwind CSS following Clean Code and SOLID principles. A modern project generator similar to 'npm create vue@latest'",
   "type": "module",
   "bin": {

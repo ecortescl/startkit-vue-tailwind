@@ -16,10 +16,10 @@ When you use this CLI, you get a complete Vue.js project with:
 - **🎨 Modern UI**: Tailwind CSS 4.x with beautiful gradients and responsive design
 - **🏗️ Clean Architecture**: Organized following SOLID and Clean Code principles
 - **⚡ Fast Development**: Vite 7.x for instant hot-reload and optimal builds
-- **🧩 Reusable Components**: Pre-built components with Tabler Icons integration
+- **🧩 Reusable Components**: Pre-built components including modals, forms, and navigation
 - **📱 Mobile-First**: Fully responsive design optimized for all devices
 - **🔧 Development Tools**: Vue DevTools integration and professional structure
-- **📦 Scalable**: Modular architecture organized by features
+- **📦 Scalable**: Modular architecture organized by features and sections
 
 ## 🚀 Quick Start
 
@@ -57,11 +57,21 @@ my-vue-app/
 │   │   └── types/              # TypeScript/JSDoc type definitions
 │   ├── shared/                 # Shared resources across features
 │   │   ├── components/         # Reusable UI components
-│   │   ├── services/           # Business logic services
+│   │   │   ├── BaseButton.vue  # Common button component
+│   │   │   ├── BaseModal.vue   # Modal dialog component
+│   │   │   ├── ContactForm.vue # Contact form component
+│   │   │   ├── CountUpNumber.vue # Animated number component
+│   │   │   ├── Footer.vue     # Footer component
+│   │   │   └── Navbar.vue     # Navigation component
 │   │   └── utils/              # Pure utility functions
 │   ├── features/               # Feature-based organization
-│   │   ├── home/               # Home page feature
-│   │   └── about/              # About page feature
+│   │   └── home/               # Home page feature
+│   │       └── sections/       # Page sections
+│   │           ├── AboutSection.vue
+│   │           ├── ContactSection.vue
+│   │           ├── HeroSection.vue
+│   │           ├── ServicesSection.vue
+│   │           └── StackSection.vue
 │   ├── layout/                 # Application layouts
 │   └── assets/                 # Static assets (images, icons, styles)
 ├── public/                     # Public static files
@@ -93,8 +103,8 @@ my-vue-app/
 
 ### Clean Code Features
 
-- **📁 Organized Structure**: Feature-based folder organization
-- **🔧 Reusable Services**: Centralized business logic
+- **📁 Organized Structure**: Feature-based folder organization with section-based components
+- **🔧 Reusable Components**: Base components for common UI elements
 - **📝 Clear Naming**: Self-documenting code with meaningful names
 - **🧪 Testable**: Architecture designed for easy unit testing
 - **📚 Documented**: JSDoc annotations and clear README files
@@ -103,8 +113,6 @@ my-vue-app/
 
 - **Node.js**: 18.0.0 or higher
 - **npm**: 6.0.0 or higher (or yarn/pnpm equivalent)
-
-
 
 ## 📞 Support & Community
 
@@ -123,6 +131,5 @@ MIT License - see [LICENSE](LICENSE) file for details.
 
 **Created with ❤️ by [eCortes.cl](https://ecortes.cl) for the Vue.js community**
 
-[🚀 Get Started](https://www.npmjs.com/package/create-startkit-vue) • [📖 Documentation](https://github.com/ecortescl/startkit-vue-tailwind) • [💬 Community](https://github.com/ecortescl/startkit-vue-tailwind/discussions)
 
 </div>
