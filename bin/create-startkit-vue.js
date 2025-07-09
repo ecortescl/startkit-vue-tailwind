@@ -106,7 +106,7 @@ async function showProjectInfo(projectName) {
     `${colors.vueGreen}Architecture:${colors.reset} Clean Code + SOLID`,
     `${colors.vueGreen}Styling:${colors.reset} Tailwind CSS 4.x`,
     `${colors.vueGreen}Build Tool:${colors.reset} Vite 7.x`,
-    `${colors.vueGreen}Framework:${colors.reset} Vue.js 3 + Options API`,
+    `${colors.vueGreen}Framework:${colors.reset} Vue.js 3`,
     `${colors.vueGreen}Created by:${colors.reset} eCortes.cl`,
     `${colors.vueGreen}Status:${colors.reset} Ready for development`,
   ]

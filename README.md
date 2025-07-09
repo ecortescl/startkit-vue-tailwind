@@ -84,7 +84,7 @@ my-vue-app/
 
 ## 🛠️ Tech Stack Included
 
-- **Framework**: Vue.js 3.5.17 (Options API)
+- **Framework**: Vue.js 3.5.17
 - **Styling**: Tailwind CSS 4.1.11
 - **Build Tool**: Vite 7.0.0
 - **Icons**: Tabler Icons Vue
