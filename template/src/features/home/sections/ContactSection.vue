@@ -11,11 +11,11 @@
       <!-- Section header -->
       <div class="text-center mb-12 md:mb-16">
         <h2 class="inline-block relative font-headings text-3xl md:text-4xl lg:text-5xl font-bold mb-4 animate-fade-in">
-          <span class="relative z-10">Hablemos de tu Proyecto</span>
+          <span class="relative z-10">Let's Talk About Your Project</span>
           <span class="absolute -bottom-2 left-0 w-full h-3 bg-secondary/10 rounded-full"></span>
         </h2>
         <p class="text-gray-300 max-w-2xl mx-auto animate-fade-in-delay">
-          ¿Listo para transformar tu idea en realidad? Contáctanos para una consulta gratuita y sin compromiso.
+          Ready to turn your idea into reality? Contact us for a free, no-obligation consultation.
         </p>
       </div>
       
@@ -193,8 +193,8 @@ const animate = () => {
 
 const handleContactSubmit = (formData) => {
   console.log('Form submitted:', formData);
-  // Aquí iría la lógica para enviar el formulario
-  alert('¡Gracias por contactarnos! Te responderemos pronto.');
+  // Here would go the form submission logic
+  alert('Thank you for contacting us! We will respond soon.');
 };
 
 function handleResize() {

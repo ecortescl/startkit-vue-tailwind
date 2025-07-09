@@ -142,92 +142,92 @@ const openModal = (service) => {
 
 const services = [
   {
-    title: 'Desarrollo Web',
-    description: 'Creamos aplicaciones web modernas, rápidas y escalables utilizando las tecnologías más avanzadas.',
+    title: 'Web Development',
+    description: 'We create modern, fast, and scalable web applications using the most advanced technologies.',
     icon: IconBrandReact,
     features: [
-      'Aplicaciones SPA con Vue y React',
-      'Diseño UI/UX personalizado',
-      'Optimización de rendimiento',
-      'Integración con APIs'
+      'SPA Applications with Vue and React',
+      'Custom UI/UX Design',
+      'Performance Optimization',
+      'API Integration'
     ],
     technologies: ['Vue.js', 'React', 'Tailwind CSS', 'Node.js', 'GraphQL'],
     process: [
       {
-        title: 'Análisis',
-        description: 'Entendemos tus necesidades y definimos los objetivos del proyecto.'
+        title: 'Analysis',
+        description: 'We understand your needs and define project objectives.'
       },
       {
-        title: 'Diseño',
-        description: 'Creamos wireframes y mockups para visualizar la interfaz.'
+        title: 'Design',
+        description: 'We create wireframes and mockups to visualize the interface.'
       },
       {
-        title: 'Desarrollo',
-        description: 'Implementamos el frontend y backend con las mejores prácticas.'
+        title: 'Development',
+        description: 'We implement frontend and backend with best practices.'
       },
       {
-        title: 'Pruebas',
-        description: 'Realizamos pruebas exhaustivas para garantizar la calidad.'
+        title: 'Testing',
+        description: 'We perform thorough testing to ensure quality.'
       }
     ]
   },
   {
-    title: 'Inteligencia Artificial',
-    description: 'Implementamos soluciones de IA que automatizan procesos y generan insights valiosos para tu negocio.',
+    title: 'Artificial Intelligence',
+    description: 'We implement AI solutions that automate processes and generate valuable insights for your business.',
     icon: IconRobot,
     features: [
-      'Machine Learning personalizado',
-      'Procesamiento de lenguaje natural',
-      'Análisis predictivo',
-      'Sistemas de recomendación'
+      'Custom Machine Learning',
+      'Natural Language Processing',
+      'Predictive Analysis',
+      'Recommendation Systems'
     ],
     technologies: ['TensorFlow', 'PyTorch', 'scikit-learn', 'NLTK', 'OpenAI API'],
     process: [
       {
-        title: 'Recopilación de datos',
-        description: 'Identificamos y recolectamos los datos necesarios.'
+        title: 'Data Collection',
+        description: 'We identify and collect the necessary data.'
       },
       {
-        title: 'Preparación',
-        description: 'Limpiamos y estructuramos los datos para el análisis.'
+        title: 'Preparation',
+        description: 'We clean and structure the data for analysis.'
       },
       {
-        title: 'Modelado',
-        description: 'Desarrollamos y entrenamos modelos de IA personalizados.'
+        title: 'Modeling',
+        description: 'We develop and train custom AI models.'
       },
       {
-        title: 'Implementación',
-        description: 'Integramos la solución en tu infraestructura existente.'
+        title: 'Implementation',
+        description: 'We integrate the solution into your existing infrastructure.'
       }
     ]
   },
   {
-    title: 'Desarrollo Backend',
-    description: 'Construimos APIs robustas y servicios backend escalables que potencian tus aplicaciones.',
+    title: 'Backend Development',
+    description: 'We build robust APIs and scalable backend services that power your applications.',
     icon: IconBrandPython,
     features: [
-      'APIs RESTful y GraphQL',
-      'Microservicios',
-      'Bases de datos SQL y NoSQL',
-      'Sistemas de autenticación seguros'
+      'RESTful and GraphQL APIs',
+      'Microservices',
+      'SQL and NoSQL Databases',
+      'Secure Authentication Systems'
     ],
     technologies: ['Node.js', 'Python', 'Django', 'Express', 'MongoDB', 'PostgreSQL'],
     process: [
       {
-        title: 'Arquitectura',
-        description: 'Diseñamos la estructura y los componentes del sistema.'
+        title: 'Architecture',
+        description: 'We design the system structure and components.'
       },
       {
-        title: 'Desarrollo',
-        description: 'Implementamos la lógica de negocio y las APIs.'
+        title: 'Development',
+        description: 'We implement business logic and APIs.'
       },
       {
-        title: 'Seguridad',
-        description: 'Aplicamos las mejores prácticas de seguridad y autenticación.'
+        title: 'Security',
+        description: 'We apply the best security practices and authentication.'
       },
       {
-        title: 'Escalabilidad',
-        description: 'Optimizamos para manejar grandes volúmenes de datos y usuarios.'
+        title: 'Scalability',
+        description: 'We optimize for handling large volumes of data and users.'
       }
     ]
   }

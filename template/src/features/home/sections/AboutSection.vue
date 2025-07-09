@@ -8,11 +8,11 @@
       <!-- Section header -->
       <div class="text-center mb-16">
         <h2 class="inline-block relative font-headings text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-          <span class="relative z-10">Sobre Nosotros</span>
+          <span class="relative z-10">About Us</span>
           <span class="absolute -bottom-2 left-0 w-full h-3 bg-secondary/10 rounded-full"></span>
         </h2>
         <p class="text-gray-300 max-w-2xl mx-auto">
-          Somos un equipo apasionado de expertos en tecnología, dedicados a transformar ideas en soluciones digitales innovadoras.
+          We are a passionate team of technology experts, dedicated to transforming ideas into innovative digital solutions.
         </p>
       </div>
       
@@ -71,17 +71,17 @@
               <div class="mt-8 pt-6 border-t border-white/10">
                 <div class="flex gap-3 items-center mb-3">
                   <IconQuote class="w-5 h-5 text-secondary" />
-                  <div class="text-sm font-medium">Lo que dicen nuestros clientes</div>
+                  <div class="text-sm font-medium">What our clients say</div>
                 </div>
                 <p class="text-gray-300 italic">
-                  "SoftTech transformó completamente nuestra operación digital. Su equipo entendió nuestras necesidades y entregó una solución que superó nuestras expectativas."
+                  "SoftTech completely transformed our digital operation. Their team understood our needs and delivered a solution that exceeded our expectations."
                 </p>
                 <div class="mt-3 flex items-center justify-between">
                   <div class="flex items-center gap-2">
                     <div class="w-8 h-8 rounded-full bg-primary/20 flex items-center justify-center">
                       <IconUser class="w-4 h-4 text-primary" />
                     </div>
-                    <span class="font-medium">Carlos Méndez</span>
+                    <span class="font-medium">Charles Miller</span>
                   </div>
                   <div class="flex">
                     <IconStar class="w-4 h-4 text-secondary" v-for="i in 5" :key="i" />
@@ -107,7 +107,7 @@
           <template #icon-left>
             <IconUsers class="w-5 h-5 group-hover:animate-bounce" />
           </template>
-          Conoce a Nuestro Equipo
+          Meet Our Team
           <template #icon-right>
             <IconArrowRight class="w-5 h-5 transform group-hover:translate-x-1 transition-transform" />
           </template>
@@ -138,23 +138,23 @@ import {
 
 const companyValues = [
   {
-    title: 'Innovación Constante',
-    description: 'Nos mantenemos a la vanguardia de las tecnologías emergentes para ofrecer soluciones de última generación.',
+    title: 'Constant Innovation',
+    description: 'We stay at the forefront of emerging technologies to offer cutting-edge solutions.',
     icon: IconBulb
   },
   {
-    title: 'Excelencia Técnica',
-    description: 'Nuestro equipo está formado por desarrolladores senior con amplia experiencia en tecnologías modernas.',
+    title: 'Technical Excellence',
+    description: 'Our team consists of senior developers with extensive experience in modern technologies.',
     icon: IconCode
   },
   {
-    title: 'Enfoque en Resultados',
-    description: 'Nos comprometemos a entregar soluciones que generen valor real y medible para tu negocio.',
+    title: 'Results-Driven',
+    description: 'We are committed to delivering solutions that generate real and measurable value for your business.',
     icon: IconRocket
   },
   {
-    title: 'Soporte Continuo',
-    description: 'Ofrecemos acompañamiento constante y soporte técnico para garantizar el éxito de tu proyecto.',
+    title: 'Continuous Support',
+    description: 'We offer constant guidance and technical support to ensure the success of your project.',
     icon: IconHeadset
   }
 ];

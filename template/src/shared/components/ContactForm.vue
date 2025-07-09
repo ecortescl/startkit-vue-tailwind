@@ -56,7 +56,7 @@
           class="submit-button group"
           :disabled="isSubmitting"
         >
-          <span class="relative z-10">{{ isSubmitting ? 'Enviando...' : 'Enviar Mensaje' }}</span>
+          <span class="relative z-10">{{ isSubmitting ? 'Sending...' : 'Send Message' }}</span>
           <IconSend class="w-5 h-5 ml-2 transform transition-transform group-hover:translate-x-1" />
           <div class="button-background"></div>
         </button>
@@ -78,11 +78,11 @@ import {
 const props = defineProps({
   title: {
     type: String,
-    default: '¿Listo para Innovar?'
+    default: 'Ready to Innovate?'
   },
   subtitle: {
     type: String,
-    default: 'Cuéntanos sobre tu proyecto'
+    default: 'Tell us about your project'
   }
 });
 
@@ -92,22 +92,22 @@ const fields = [
   {
     name: 'name',
     type: 'text',
-    label: 'Nombre',
-    placeholder: 'Tu nombre completo',
+    label: 'Name',
+    placeholder: 'Your full name',
     icon: IconUserCircle
   },
   {
     name: 'email',
     type: 'email',
     label: 'Email',
-    placeholder: 'tu@email.com',
+    placeholder: 'your@email.com',
     icon: IconMail
   },
   {
     name: 'message',
     type: 'textarea',
-    label: 'Mensaje',
-    placeholder: 'Describe tu proyecto o idea...',
+    label: 'Message',
+    placeholder: 'Describe your project or idea...',
     icon: IconMessageDots
   }
 ];
