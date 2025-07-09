@@ -1,0 +1,17 @@
+# Repository Context
+Stack: Vue 3, Vite 7, Tailwind CSS 4, Tabler Icons.
+
+Architecture:
+my-vue-app/
+- src:
+  - core: constants, router, types
+  - shared: components, services, utils
+  - features: home, about
+  - layout
+  - assets
+- public
+- root files: index.html, package.json, vite.config.js, tailwind.config.js, README.md
+
+Principles:
+- SOLID: Single Responsibility, Open/Closed, Liskov Substitution, Interface Segregation, Dependency Inversion.
+- Clean Code: Feature-based structure, Reusable services, Clear naming, Testable, Documented (JSDoc, README).
